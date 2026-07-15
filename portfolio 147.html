@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Judy Maa | Learning Experience Designer</title>
+  <title>Judy Maa | Product Learning & AI Adoption Specialist</title>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,7 +58,7 @@
 
     nav .logo-name {
       font-family: 'Fraunces', serif;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       color: var(--brown);
       line-height: 1;
     }
@@ -606,6 +606,14 @@
       nav ul a { font-size: 0.9rem; }
       .ppt-embed iframe { height: 260px; }
     }
+
+    .cursor {
+      display: inline-block;
+      color: #93C5FD;
+      animation: blink 0.7s step-end infinite;
+      font-weight: 300;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
   </style>
 </head>
 <body>
@@ -614,7 +622,6 @@
   <nav>
     <a href="#hero" class="logo">
         <span class="logo-name">Judy Maa</span>
-        <span class="logo-title">Learning Experience Designer</span>
       </a>
     <ul>
       <li><a href="#about">About</a></li>
@@ -629,10 +636,10 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="hero-eyebrow">Learning Experience Designer</p>
-          <h1>Turning complex ideas into <em>learning that sticks.</em></h1>
+          <p class="hero-eyebrow">Product Learning & AI Adoption Specialist</p>
+          <h1 id="hero-heading"></h1>
           <p class="hero-bio">
-            I design learning systems that are clear, engaging, and easy to follow — from interactive e-learning to AI-assisted workflows.
+            I help organisations adopt AI and build learning systems that scale, from prompt-engineered workflows to AI-powered enablement programs.
             Currently working at <strong>SAP</strong> and completing my M.Sc. at <strong>TU Munich</strong>.
           </p>
           <div class="hero-cta">
@@ -642,6 +649,10 @@
         </div>
       </div>
       <div class="hero-stats">
+        <div>
+          <div class="stat-number">1k+</div>
+          <div class="stat-label">Educators enabled through training & coaching</div>
+        </div>
         <div>
           <div class="stat-number">30%</div>
           <div class="stat-label">Time saved via AI workflow at SAP</div>
@@ -865,6 +876,98 @@
           </div>
         </div>
 
+
+        <!-- Case 5: AI Video Editing Workflow -->
+        <div class="case-study">
+          <div class="case-header">
+            <span class="case-tag tag-enterprise">Enterprise L&amp;D</span>
+            <span class="case-tag tag-elearning">AI Workflow</span>
+          </div>
+          <div class="case-body">
+            <p class="case-org">SAP · 2025</p>
+            <h3>AI-Powered Video Editing Workflow</h3>
+            <p>Designed a reusable 10-step AI workflow to transform raw video scripts into publish-ready learning videos — cutting video editing time by 50%. The workflow uses Microsoft Copilot to clean and restructure SRT subtitles, Azure AI to regenerate professional voiceovers, and Camtasia for final post-production.</p>
+            <div class="metrics-row">
+              <div class="metric">
+                <div class="metric-value">50%</div>
+                <div class="metric-label">Video editing time saved</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">10</div>
+                <div class="metric-label">Step repeatable workflow</div>
+              </div>
+            </div>
+            <p><strong>Workflow steps:</strong></p>
+            <div class="badges">
+              <span class="badge-step">1. Upload to LSC → extract SRT</span>
+              <span class="badge-step">2. Strip timestamps via Copilot</span>
+              <span class="badge-step">3. Reformat for Azure AI voice</span>
+              <span class="badge-step">4. Remove redundant words</span>
+              <span class="badge-step">5. Logic &amp; flow check</span>
+              <span class="badge-step">6. Add opening &amp; closing</span>
+              <span class="badge-step">7. Generate audio in Azure AI</span>
+              <span class="badge-step">8. Combine audio &amp; video in Camtasia</span>
+              <span class="badge-step">9. Add effects, animation &amp; thumbnail</span>
+              <span class="badge-step">10. Export MP4 with embedded captions</span>
+            </div>
+            <div class="tools-row">
+              <span class="tool-chip">Microsoft Copilot</span>
+              <span class="tool-chip">Azure AI Voice</span>
+              <span class="tool-chip">Camtasia</span>
+              <span class="tool-chip">Prompt Engineering</span>
+              <span class="tool-chip">LSC</span>
+            </div>
+            <p style="font-size:0.9rem;color:var(--mid);font-style:italic;">Prompt-driven workflow designed to align AI-generated audio with existing video, minimising re-editing effort.</p>
+          </div>
+        </div>
+
+        <!-- Case 6: AI Video to Learning Guide Creator -->
+        <div class="case-study">
+          <div class="case-header">
+            <span class="case-tag tag-enterprise">Enterprise L&amp;D</span>
+            <span class="case-tag tag-elearning">AI Tool</span>
+          </div>
+          <div class="case-body">
+            <p class="case-org">SAP · 2026</p>
+            <h3>AI Video to Learning Guide Creator</h3>
+            <p>A group project to build a full-stack application that converts video tutorials into step-by-step learning guides. As the instructional designer on the team, I handled technical setup, end-to-end testing, and provided feedback to align the tool with real learning workflows.</p>
+            <ul style="margin: 0 0 1.5rem 1.2rem; color: var(--mid); font-size: 1rem; line-height: 1.9;">
+              <li>Deployed and ran a full-stack application (FastAPI backend, React frontend) locally on Windows — installing Python, FFmpeg, and Whisper from scratch.</li>
+              <li>Diagnosed and resolved environment issues across the full pipeline, from transcription engine to AI integration.</li>
+              <li>Leveraged Claude API to convert unstructured video content into structured procedural documentation.</li>
+              <li>Automated knowledge capture and documentation workflows for efficient content creation.</li>
+              <li>Provided instructional design evaluation to align the tool with real learning workflows.</li>
+            </ul>
+            <div class="metrics-row">
+              <div class="metric">
+                <div class="metric-value">90%</div>
+                <div class="metric-label">Pipeline operational after testing</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">POC</div>
+                <div class="metric-label">Proof of concept evaluated</div>
+              </div>
+            </div>
+            <p><strong>Pipeline steps reviewed:</strong></p>
+            <div class="badges">
+              <span class="badge-step">Video Upload</span>
+              <span class="badge-step">Whisper Transcription</span>
+              <span class="badge-step">AI Step Generation</span>
+              <span class="badge-step">Screenshot Extraction</span>
+              <span class="badge-step">Course Export</span>
+            </div>
+            <div class="tools-row">
+              <span class="tool-chip">Whisper</span>
+              <span class="tool-chip">Claude AI</span>
+              <span class="tool-chip">Kaltura</span>
+              <span class="tool-chip">Camtasia</span>
+              <span class="tool-chip">FastAPI</span>
+              <span class="tool-chip">React</span>
+            </div>
+            <p style="font-size:0.9rem;color:var(--mid);font-style:italic;">Internal SAP group project — instructional design evaluation and testing.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -909,7 +1012,10 @@
         <div class="skill-list">
           <div class="skill-item">AI workflow design (UAI Booster)</div>
           <div class="skill-item">Azure AI audio generation</div>
-          <div class="skill-item">Yoodli AI coaching</div>
+          <div class="skill-item">Microsoft Copilot</div>
+          <div class="skill-item">ChatGPT</div>
+          <div class="skill-item">Claude</div>
+          <div class="skill-item">Yoodli AI (conversational assessments)</div>
           <div class="skill-item">NotebookLM</div>
           <div class="skill-item">Prompt engineering</div>
         </div>
@@ -960,7 +1066,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Judy Tzyy-Yuh Maa · Learning Experience Designer · Munich</p>
+    <p>© 2026 Judy Tzyy-Yuh Maa · Product Learning & AI Adoption Specialist · Munich</p>
   </footer>
 
   <script>
@@ -972,6 +1078,40 @@
         document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
       });
     });
+
+    // Typewriter effect
+    const line1 = 'Turning complex ideas into';
+    const line2 = 'learning that sticks.';
+    const heading = document.getElementById('hero-heading');
+    let i = 0;
+    let phase = 1;
+
+    function type() {
+      if (phase === 1) {
+        if (i < line1.length) {
+          heading.innerHTML = line1.slice(0, i + 1) + '<span class="cursor">|</span>';
+          i++;
+          setTimeout(type, 45);
+        } else {
+          heading.innerHTML = line1 + '<br><em></em><span class="cursor">|</span>';
+          i = 0;
+          phase = 2;
+          setTimeout(type, 120);
+        }
+      } else {
+        const em = heading.querySelector('em');
+        const cursor = heading.querySelector('.cursor');
+        if (i < line2.length) {
+          em.textContent = line2.slice(0, i + 1);
+          i++;
+          setTimeout(type, 45);
+        } else {
+          cursor.style.display = 'none';
+        }
+      }
+    }
+
+    type();
   </script>
 </body>
 </html>
