@@ -630,7 +630,7 @@
       <div class="hero-inner">
         <div class="hero-text">
           <p class="hero-eyebrow">Learning Experience Designer</p>
-          <h1>Turning complex ideas into <em>learning that sticks.</em></h1>
+          <h1 id="hero-heading"></h1>
           <p class="hero-bio">
             I design learning systems that are clear, engaging, and easy to follow — from interactive e-learning to AI-assisted workflows.
             Currently working at <strong>SAP</strong> and completing my M.Sc. at <strong>TU Munich</strong>.
@@ -972,6 +972,33 @@
         document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
       });
     });
+
+    // Typewriter effect for hero heading
+    const part1 = 'Turning complex ideas into ';
+    const part2 = 'learning that sticks.';
+    const heading = document.getElementById('hero-heading');
+    let i = 0;
+
+    function type() {
+      if (i <= part1.length) {
+        heading.innerHTML = part1.slice(0, i) + '<em>' + part2 + '</em>'.replace('<em>', '<em style="opacity:0">').replace('</em>', '</em>');
+        // Show plain text first, then the em part fades in
+        heading.innerHTML = part1.slice(0, i);
+        i++;
+        setTimeout(type, 38);
+      } else {
+        heading.innerHTML = part1 + '<em></em>';
+        const em = heading.querySelector('em');
+        let j = 0;
+        function typeEm() {
+          em.textContent = part2.slice(0, j);
+          j++;
+          if (j <= part2.length) setTimeout(typeEm, 48);
+        }
+        typeEm();
+      }
+    }
+    type();
   </script>
 </body>
 </html>
